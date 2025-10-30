@@ -1,13 +1,20 @@
-@use "../helpers/" as *;
+@use "../helpers" as *;
 
 .header {
+  position: sticky;
+  z-index: 100;
+  top: 0;
+  animation-name: scrolling-header;
+  animation-fill-mode: both;
+
   &__promo {
     padding-block: rem(20);
     text-align: center;
     border-bottom: var(--border);
+    background-color: var(--color-dark);
 
     @include laptop {
-        padding-block: rem(14);
+      padding-block: rem(14);
     }
 
     &-link {
@@ -20,7 +27,7 @@
     background-color: var(--color-dark-10);
 
     @include laptop {
-        padding-block: rem(20);
+      padding-block: rem(20);
     }
 
     &-inner {
@@ -35,37 +42,66 @@
     }
 
     @include mobile {
-        &:not(.is-active) {
-            @include hide;
+      position: fixed;
+      inset: 0; //растянуть весь элемент растянем на весь экран
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      row-gap: rem(3);
+      padding: 1rem;
+      background-color: var(--color-dark-10);
+      transition-duration: var(--transition-duration);
 
-            translate: 100%;
-        }
+      &:not(.is-active) {
+        @include hide;
+
+        translate: 100%;
+      }
     }
   }
 
-  &__mune {
+  &__menu {
+    @include mobile {
+      overflow-y: auto;
+    }
+
     &-list {
       @include flex-between;
       column-gap: rem(16);
 
       @include laptop {
         column-gap: rem(6);
+
+        @include mobile {
+          display: flex;
+          flex-direction: column;
+          row-gap: rem(1);
+        }
       }
     }
 
     &-link {
-        padding-block: fluid(14, 10);
-        padding-inline: fluid(24, 18);
-        color: var(--color-gray-50);
+      padding-block: fluid(14, 10);
+      padding-inline: fluid(24, 18);
+      color: var(--color-gray-50);
 
-        &.is-active {
-            font-weight: 500;
-            border: var(--border);
-            border-radius: var(--border-radius);
-            background-color: var(--color-dark);
-            color: var(--color-light);
-            pointer-events: none;
-        }
+      &.is-active {
+        font-weight: 500;
+        border: var(--border);
+        border-radius: var(--border-radius);
+        background-color: var(--color-dark);
+        color: var(--color-light);
+        pointer-events: none;
+      }
+    }
+
+  }
+
+  &__contact-us-link {
+    @include mobile {
+      width: 100%;
+      max-width: rem(300);
+      align-self: center;
     }
   }
 }

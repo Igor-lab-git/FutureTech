@@ -1,8 +1,9 @@
-@use "../helpers/" as *;
+@use "../helpers" as *;
 
 .button {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
+  min-width: rem(137);
   white-space: nowrap;
   padding: rem(18) rem(24);
   border: var(--border);
