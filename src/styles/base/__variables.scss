@@ -16,6 +16,11 @@
 
   --color-red: #FF5500;
 
+  --border: #{rem(1)} solid var(--color-dark-15);
+
+  --border-radius: #{rem(10)};
+  --border-radius-button: #{rem(12)};
+
   --font-family-base: "Inter", sans-serif;
   --font-family-accent: "Kumbh Sans";
 
@@ -26,5 +31,6 @@
     --container-width: #{rem(1280)};
   }
 
-  --transition-duration: 0.2s;
+  --transition-duration: 0.3s;
+
 }

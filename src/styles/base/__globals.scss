@@ -112,7 +112,7 @@ a {
   color: inherit;
 
   @include hover {
-    text-decoration: var(--color-accent);
+    color: var(--color-accent);
   }
 
   &[class] {
@@ -131,6 +131,20 @@ button {
     @include square(rem(30));
 
     content: "";
+  }
+}
+
+a,
+button {
+  &[aria-label] {
+    position: relative;
+
+    &::before {
+      @include abs-center;
+      @include square(rem(44));
+
+      content: "";
+    }
   }
 }
 
