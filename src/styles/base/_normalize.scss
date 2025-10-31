@@ -354,3 +354,21 @@ template {
 [hidden] {
   display: none;
 }
+
+:where(ul[class]) {
+  list-style: none;
+}
+
+dl {
+  margin: 0;
+  padding: 0;
+}
+
+dd {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+dt {
+  margin-bottom: 0;
+}

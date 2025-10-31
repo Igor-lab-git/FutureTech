@@ -14,13 +14,65 @@
     padding-top: rem(150);
     padding-right: rem(50);
     padding-bottom: rem(100);
+
+    &-subtitle {
+      @include fluid-text(30, 18);
+
+      font-family: var(--font-family-accent);
+      font-weight: 500;
+      line-height: 1.2;
+      color: var(--color-gray-40);
+
+      &:not(:last-child) {
+        margin-bottom: fluid(30, 14);
+      }
+    }
+
+    &-title {
+      &:not(:last-child) {
+        margin-bottom: fluid(20, 10);
+      }
+    }
   }
 
   &__metrics {
     grid-area: metrics;
+    border-top: var(--border);
   }
 
   &__resources-preview {
     grid-area: resources-preview;
+  }
+
+  &__resources-preview {
+    padding-left: fluid(80, 40);
+    padding-bottom: fluid(80, 40);
+    border-left: var(--border);
+    background: url("../../../public/images/hero/resources-preview/bg-container.png") 0 0/cover no-repeat;
+  }
+
+  &__advantages {
+    border-block: var(--border);
+
+    &-list {
+      margin-block: 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &-item {
+      --paddingX: #{rem(80)};
+
+      padding-block: fluid(50, 30);
+
+      &:not(:first-child) {
+        padding-left: var(--paddingX);
+      }
+
+      &:not(:last-child) {
+        padding-right: var(--paddingX);
+        border-right: var(--border);
+      }
+    }
   }
 }
