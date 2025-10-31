@@ -6,3 +6,6 @@ const user = {
 
 console.log(user);
 
+let x = 2;
+let a = 7;
+console.log(x >= 2 && a <= 7);

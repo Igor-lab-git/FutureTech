@@ -1,8 +1,8 @@
 class  Header {
     selectors = {
-        root: "[data-js-header]",
-        overlay: "[data-js-header-overlay]",
-        burgerMenu: "[data-js-header-burger-button]",
+        rootHeaderAttribute: "[data-js-header]",
+        overlayMenuAttribute: "[data-js-header-overlay]",
+        burgerMenuAttribute: "[data-js-header-burger-button]",
     };
     stateClasses = {
         isActive: "is-active",
@@ -10,9 +10,9 @@ class  Header {
     }
 
     constructor() {
-        this.rootElement = document.querySelector(this.selectors.root);
-        this.overlayElement = this.rootElement.querySelector(this.selectors.overlay);
-        this.burgerButtonElement = this.rootElement.querySelector(this.selectors.burgerMenu);
+        this.rootElement = document.querySelector(this.selectors.rootHeaderAttribute);
+        this.overlayElement = this.rootElement.querySelector(this.selectors.overlayMenuAttribute);
+        this.burgerButtonElement = this.rootElement.querySelector(this.selectors.burgerMenuAttribute);
         this.bindEvents();
     }
 
