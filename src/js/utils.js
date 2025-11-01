@@ -11,3 +11,20 @@ let a = 7;
 console.log(x >= 2 && a <= 7);
 
 
+const createCar = (model, color, countDoor, isNew) => {
+  return {
+    model,
+    color,
+    countDoor,
+    isNew
+  }
+}
+const car = createCar("BMW", "red", 5, true);
+
+
+console.log(car);
+
+for(let key in car) {
+  console.log(key + ": " + car[key]);
+  
+}

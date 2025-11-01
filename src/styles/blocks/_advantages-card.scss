@@ -5,6 +5,16 @@
   flex-direction: column;
   row-gap: rem(30);
 
+  @include laptop {
+    row-gap: rem(20);
+  }
+
+  &__image {
+    @include laptop {
+      @include square(rem(40));
+    }
+  }
+
   &__link {
     --circlSize: #{rem(52)};
     --circlMarginLeft: #{rem(20)};
@@ -17,6 +27,12 @@
     &:after {
       @include square(var(--circlSize));
       @include abs-y;
+
+      @include laptop {
+        --circlSize: #{rem(44)};
+        --circlMarginLeft: #{rem(16)};
+        row-gap: rem(2);
+      }
 
       content: "";
       position: absolute;

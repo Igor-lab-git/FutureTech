@@ -13,6 +13,10 @@
     row-gap: fluid(10, 0);
     padding: rem(50);
 
+    @include laptop {
+      padding: rem(30) rem(40);
+    }
+
     &:first-child {
       padding-left: 0;
     }
