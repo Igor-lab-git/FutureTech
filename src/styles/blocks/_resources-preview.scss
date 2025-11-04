@@ -11,4 +11,10 @@
     display: grid;
     row-gap: fluid(14, 4);
   }
+
+  &__button {
+    @include mobile-s {
+      width: 100%;
+    }
+  }
 }

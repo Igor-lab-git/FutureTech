@@ -23,5 +23,11 @@
 
       border-width: rem(1);
     }
+
+    @include mobile {
+      @include square(rem(40));
+
+      border-width: rem(1);
+    }
   }
 }

@@ -1,0 +1,67 @@
+@use "../helpers" as *;
+
+.tabs {
+
+  &__header {
+    border-bottom: var(--border);
+
+    @include tablet {
+      overflow-x: auto;
+    }
+  }
+
+  &__buttons {
+    padding-block: fluid(50, 20);
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: rem(20);
+
+    @include laptop {
+      column-gap: rem(14);
+    }
+    @include tablet {
+      width: max-content;
+    }
+
+  }
+
+  &__button {
+    padding-block: fluid(30, 18);
+    padding-inline: rem(10);
+    font-size: rem(18);
+    border: var(--border);
+    border-radius: rem(8);
+    color: var(--color-gray-60);
+
+    @include hover() {
+      border-color: var(--color-accent);
+      color: var(--color-accent);
+    }
+
+    @include laptop {
+      font-size: rem(14);
+    }
+
+    @include mobile {
+      border-radius: rem(7);
+    }
+
+    &.is-active {
+      font-weight: 500;
+      pointer-events: none;
+      background-color: var(--color-dark-10);
+      color: var(--color-light);
+    }
+
+  }
+
+  &__content {
+    &:not(.is-active) {
+      display: none;
+    }
+
+    &:focus-visible {
+      outline-offset: -1rem;
+    }
+  }
+}

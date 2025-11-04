@@ -1,0 +1,59 @@
+@use "../helpers" as *;
+
+.blog-card {
+  padding-block: fluid(80, 40);
+  display: grid;
+  grid-template-columns: 24% 1fr auto;
+  align-items: center;
+  column-gap: fluid(50, 28);
+
+  @include tablet {
+    grid-template-columns: 1fr auto;
+    row-gap: rem(30);
+    grid-template-areas:
+      "author link"
+      "body body";
+  }
+
+  @include mobile {
+    row-gap: rem(30);
+  }
+
+  &__author {
+    align-self: start;
+
+    @include tablet {
+      grid-area: author;
+    }
+  }
+
+  &__body {
+    display: grid;
+    row-gap: fluid(30, 20);
+
+    @include tablet {
+      grid-area: body;
+    }
+
+    &-date {
+      color: var(--color-gray-60);
+    }
+
+    &__info {
+      display: grid;
+      row-gap: fluid(10, 4);
+    }
+
+    &--color-red {
+      align-self: center;
+    }
+
+  }
+
+  &__link {
+    @include tablet {
+      grid-area: link;
+    }
+  }
+
+}
