@@ -1,0 +1,28 @@
+@use "../helpers" as *;
+
+.download-info {
+  padding: rem(30);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  column-gap: rem(50);
+
+  @include laptop {
+    padding: rem(20);
+    column-gap: rem(30);
+  }
+
+  &__team {
+    --persoImageSize: #{rem(50)};
+
+    background-color: var(--color-dark);
+    border-radius: var(--border-radius-button);
+
+    @include laptop {
+      --persoImageSize: #{rem(40)};
+
+      @include square(40);
+    }
+  }
+
+}

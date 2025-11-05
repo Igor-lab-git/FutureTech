@@ -1,24 +1,9 @@
-const user = {
-  id: 1,
-  name: "John",
-  age: 25,
-  logUser() {
-    return `Nema is ${this.name} and me ${this.age} `
-  }
-};
 
-console.log(user.logUser());
+const str = "Начало строки и конец снова начало Строки и Конец";
+const number = "+7 (908) 237-05-01"
 
-
-const elena = {
-  id: 1,
-  name: "lena",
-  age: 20,
-}
-
-const logElena = user.logUser.bind(elena);
-
-console.log(logElena());
+console.log(str.split(" ").map(word => word[0].toUpperCase() ? word.toLowerCase() : word).join(" "));
+console.log(str.slice(-6));
 
 
 

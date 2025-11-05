@@ -32,6 +32,8 @@
 @use "./blocks/blog-action";
 @use "./blocks/blog-card";
 
+@use "./blocks/download-info";
+
 .header,
 main > *:not(:last-child),
  .footer {
