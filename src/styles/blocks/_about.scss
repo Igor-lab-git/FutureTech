@@ -1,0 +1,56 @@
+@use "../helpers" as *;
+
+.about {
+  padding-block: fluid(120, 80);
+  padding-inline: fluid(162, 0);
+  background-color: var(--color-dark-10);
+
+  &__inner {
+    display: grid;
+    row-gap: fluid(100, 40);
+  }
+
+  &__header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    grid-template-areas:
+  "icon info"
+  "icon description";
+    column-gap: fluid(80, 20);
+    row-gap: rem(30);
+
+    @include laptop {
+      row-gap: rem(20);
+    }
+
+    @include mobile {
+      row-gap: rem(4);
+    }
+
+  }
+
+  &__icon {
+    grid-area: icon;
+    width: fluid(150, 60);
+    height: fluid(150, 60);
+  }
+
+  &__info {
+    display: grid;
+    row-gap: rem(16);
+    grid-area: info;
+
+    @include laptop {
+      row-gap: rem(10);
+    }
+  }
+
+  &__subtitle {
+    justify-self: start;
+  }
+
+  &__description {
+    grid-area: description;
+  }
+}

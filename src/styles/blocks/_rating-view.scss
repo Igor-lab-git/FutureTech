@@ -1,1 +1,31 @@
 @use "../helpers" as *;
+
+.rating-view {
+  display: inline-flex;
+  column-gap: rem(7);
+  padding: rem(10) rem(16);
+  border: var(--border);
+  border-radius: rem(100);
+  background-color: var(--color-dark);
+
+  @include laptop {
+    column-gap: rem(4);
+    padding: rem(8) rem(12);
+  }
+
+  &__star {
+    --starSize: #{rem(24)};
+
+    @include square(var(--starSize));
+
+    background: url("../../../public/icons/reviews/icon-star-gray.svg") center/contain no-repeat;
+
+    &.is-active {
+      background: url("../../../public/icons/reviews/icon-star-yellow.svg") center/contain no-repeat;
+    }
+
+    @include laptop {
+      --starSize: #{rem(20)};
+    }
+  }
+}

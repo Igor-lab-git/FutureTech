@@ -21,6 +21,16 @@ const users = [
 console.log([...users].sort((a, b) => b.age - a.age));
 console.log(users);
 
+const person = {
+    id: 1,
+    name: "Jenna",
+    age: 23,
+    city: "Los Angeles"
+}
+
+const json = JSON.stringify(person);
+console.log(json);
+
 
 
 
