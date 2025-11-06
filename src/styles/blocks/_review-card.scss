@@ -1,0 +1,12 @@
+@use "../helpers" as *;
+
+.review-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: rem(40);
+
+  @include laptop {
+    row-gap: rem(30);
+  }
+}

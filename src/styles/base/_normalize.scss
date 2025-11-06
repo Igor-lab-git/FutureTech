@@ -23,6 +23,9 @@ html {
 
 body {
   margin: 0;
+  :where(blockquote, figure):where([class]) {
+    margin: 0;
+  }
 }
 
 /**

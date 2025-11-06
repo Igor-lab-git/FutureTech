@@ -2,7 +2,7 @@
 
 .download-info {
   padding: rem(30);
-  display: grid;
+  display: inline-grid;
   grid-template-columns: 1fr auto;
   align-items: center;
   column-gap: rem(50);
@@ -13,15 +13,13 @@
   }
 
   &__team {
-    --persoImageSize: #{rem(50)};
+    --personImageSize: #{rem(50)};
 
     background-color: var(--color-dark);
     border-radius: var(--border-radius-button);
 
     @include laptop {
       --persoImageSize: #{rem(40)};
-
-      @include square(40);
     }
   }
 

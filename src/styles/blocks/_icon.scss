@@ -26,4 +26,11 @@
         center/contain no-repeat;
     }
   }
+
+  &--yellow-eye {
+    &::after {
+      background: url("../../../public/icons/Icon-yellow-eye.svg")
+        center/contain no-repeat;
+    }
+  }
 }

@@ -11,7 +11,8 @@
   
 
   &__person {
-    @include square(rem(60));
+    width: var(--personImageSize);
+    height: var(--personImageSize);
     
     border: rem(2) solid var(--color-dark-40);
     border-radius: 50%;
@@ -21,13 +22,13 @@
       margin-left: calc(var(--personImageSize)  / 4 * -1);
     }
     @include laptop {
-      @include square(rem(50));
+      --personImageSize: #{rem(50)};
 
       border-width: rem(1);
     }
 
     @include mobile {
-      @include square(rem(40));
+      --personImageSize: #{rem(40)};
 
       border-width: rem(1);
     }
