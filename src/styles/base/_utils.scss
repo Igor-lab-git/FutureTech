@@ -78,3 +78,39 @@
   }
 }
 
+
+.circle-icon {
+  --circlSize: #{rem(52)};
+  --circlMarginLeft: #{rem(20)};
+
+  position: relative;
+  min-height: var(--circlSize);
+  padding-right: calc(var(--circlSize) + var(--circlMarginLeft));
+
+  @include mobile {
+    row-gap: rem(2);
+  }
+  &:after {
+    @include square(var(--circlSize));
+    @include abs-y;
+
+    @include laptop {
+      --circlSize: #{rem(44)};
+      --circlMarginLeft: #{rem(16)};
+      row-gap: rem(2);
+    }
+
+    @include mobile {
+      --circlSize: #{rem(40)};
+      --circlMarginLeft: #{rem(14)};
+    }
+
+    content: "";
+    position: absolute;
+    right: 0;
+    border-radius: 100%;
+    background: url("../../../public/icons/hero/Icon-arrow-bottom-black.svg") center no-repeat;
+    background-color: var(--color-accent);
+  }
+}
+
