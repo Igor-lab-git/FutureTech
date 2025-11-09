@@ -7,52 +7,76 @@
   display: grid;
   grid-template-columns: repeat(var(--columns), 1fr);
 
+
   &--2-cols {
     --columns: 2;
-  }
-
-  &--3-cols {
-    --columns: 3;
-    --itemPaddingX: #{rem(50)};
+    --itemPaddingX: #{rem(80)};
 
     @include laptop {
-      --itemPaddingX: #{rem(40)};
-
+      --itemPaddingX: #{rem(50)};
     }
 
-    @include tablet {
+    @include mobile {
       --columns: 1;
-
-      .bordered-grid__item:not(:last-child) {
-        border-bottom: var(--border);
-      }
     }
 
-    @include tablet-above {
-      .bordered-grid__item {
-        // Выбираем элементы 1-й и 2-й колонки
-        &:nth-child(3n - 2),
-        &:nth-child(3n - 1) {
-          padding-right: var(--itemPaddingX);
-          border-right: var(--border);
-        }
+    .bordered-grid__item {
+      &:nth-child(odd) {
+        padding-right: var(--itemPaddingX);
+      }
 
-        // Выбираем элементы во 2-й колонке
-        &:nth-child(3n - 1) {
-          @include full-vw-centered-line(bottom);
-        }
-
-        // Выбираем элементы 2-й и 3-й колонки
-        &:nth-child(3n - 1),
-        &:nth-child(3n) {
-          padding-left: var(--itemPaddingX);
-        }
+      &:nth-child(even) {
+        padding-left: var(--itemPaddingX);
       }
     }
+  }
+
+
+&--3-cols {
+  --columns: 3;
+  --itemPaddingX: #{rem(50)};
+
+  column-gap: calc(var(--itemPaddingX) * 2);
+
+  @include laptop {
+    --itemPaddingX: #{rem(40)};
 
   }
 
-  &__item {
-    padding-block: var(--itemPaddingY);
+  @include tablet {
+    --columns: 1;
+
+    .bordered-grid__item:not(:last-child) {
+      border-bottom: var(--border);
+    }
   }
+
+  @include tablet-above {
+    .bordered-grid__item {
+      // Выбираем элементы 1-й и 2-й колонки
+      &:nth-child(3n - 2),
+      &:nth-child(3n - 1) {
+        padding-right: var(--itemPaddingX);
+        border-right: var(--border);
+      }
+
+      // Выбираем элементы во 2-й колонке
+      &:nth-child(3n - 1) {
+        @include full-vw-centered-line(bottom);
+      }
+
+      // Выбираем элементы 2-й и 3-й колонки
+      &:nth-child(3n - 1),
+      &:nth-child(3n) {
+        padding-left: var(--itemPaddingX);
+      }
+    }
+  }
+
+}
+
+&__item {
+  padding-block: var(--itemPaddingY);
+}
+
 }

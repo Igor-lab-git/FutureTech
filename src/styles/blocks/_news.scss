@@ -1,0 +1,16 @@
+@use "../helpers" as *;
+
+.news {
+  padding-block: fluid(80, 40);
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(rem(350), 1fr));
+    column-gap: rem(30);
+    row-gap: rem(30);
+
+    @include mobile-above {
+      row-gap: rem(30);
+    }
+  }
+}

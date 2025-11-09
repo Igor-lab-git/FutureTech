@@ -30,7 +30,9 @@ const person = {
   age: 23,
   city: "Los Angeles",
 };
+console.log(Math.max(...array2, 10, 11, 12, 13))
+const bigString = [...str.toUpperCase()]
+console.log(bigString.join(""))
 
-const person1 = {...person};
-console.log(person === person1);
+
 
