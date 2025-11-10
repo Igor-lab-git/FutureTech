@@ -1,1 +1,65 @@
 @use "../helpers" as *;
+
+.video-player {
+  position: relative;
+  &__video {
+    width: 100%;
+    height: fluid(410, 210);
+    object-fit: cover;
+    border-radius: var(--border-radius-button);
+
+    @include laptop {
+      border-radius: var(--border-radius);
+    }
+  }
+
+  &__panel {
+    position: absolute;
+    inset: 0;
+    padding: rem(30);
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    column-gap: 1rem;
+    transition-duration: var(--transition-duration);
+
+    &:not(.is-active) {
+      @include hide;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(
+        180deg,
+        rgba(20, 20, 20, 0) 44.27%,
+        #141414 100%
+      );
+    }
+
+    * {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  &__panel-button {
+    --size: #{rem(70)};
+    @include flex-center;
+    @include square(var(--size));
+
+    background-color: transparent;
+    border: none;
+
+    @include laptop {
+      --size: #{rem(50)};
+    }
+
+    @include hover {
+      & path {
+        fill: var(--color-accent);
+      }
+    }
+  }
+}
