@@ -12,10 +12,10 @@
   }
 
   &__button {
-    padding: rem(8) rem(16);
     display: inline-flex;
     align-items: center;
     column-gap: rem(4);
+    padding: rem(8) rem(16);
     font-family: var(--font-family-accent);
     font-size: rem(18);
     border-radius: rem(100);

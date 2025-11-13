@@ -49,6 +49,9 @@
 @use "./blocks/video-card";
 @use "./blocks/video-player";
 
+@use "./blocks/blog-details";
+@use "./blocks/table-of-contents";
+
 // .header,
 // main > *:not(:last-child),
 //  .footer {
