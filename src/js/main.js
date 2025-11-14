@@ -3,7 +3,8 @@ import "../styles/main.scss";
 import "./utils.js";
 import  "./Header.js";
 import "./Tabs.js";
-import "./VideoPlayer.js"
+import "./VideoPlayer.js";
+import "./ExpandableContent.js";
 
 
 

@@ -33,4 +33,11 @@
         center/contain no-repeat;
     }
   }
+
+  &--gray-arrow-down {
+    &::after {
+      background: url("../../../public/icons/blog/hero/Icon-gray-down.svg")
+        center/contain no-repeat;
+    }
+  }
 }

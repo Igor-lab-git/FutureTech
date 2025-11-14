@@ -4,7 +4,7 @@
 @use "./base/utils";
 @use "./base/globals";
 
-
+@use "./blocks/expandable-content";
 @use "./blocks/icon";
 @use "./blocks/logo";
 @use "./blocks/button";
@@ -51,6 +51,7 @@
 
 @use "./blocks/blog-details";
 @use "./blocks/table-of-contents";
+
 
 // .header,
 // main > *:not(:last-child),
