@@ -1,7 +1,7 @@
 const rootSelector = "[data-js-expandable-content]";
 
 class ExpandableContent {
-  seclectors = {
+  selectors = {
     root: rootSelector,
     button: "[data-js-expandable-content-button]",
   };
@@ -17,7 +17,7 @@ class ExpandableContent {
 
   constructor(rootElement) {
     this.rootElement = rootElement;
-    this.buttonElement = this.rootElement.querySelector(this.seclectors.button);
+    this.buttonElement = this.rootElement.querySelector(this.selectors.button);
     this.bindEvents();
   }
 
