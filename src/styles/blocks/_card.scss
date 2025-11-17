@@ -107,6 +107,20 @@
         grid-template-columns: repeat(3, 1fr);
       }
     }
+
+    &--3-cols-alt {
+      grid-template-columns: repeat(3, 1fr);
+      row-gap: fluid(50, 20);
+      column-gap: rem(20);
+
+      @include laptop {
+        column-gap: rem(16);
+      }
+
+      @include mobile-s {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
   }
 
   &__cell {
@@ -127,6 +141,17 @@
         "other link"
         "other link";
       column-gap: rem(20);
+      row-gap: fluid(14, 10);
+    }
+
+    &:not(.tile) {
+      @include mobile-s {
+        grid-template: initial;
+
+        .card__cell-link {
+          grid-area: initial;
+        }
+      }
     }
 
     &-subtitle {
@@ -148,6 +173,20 @@
 
     &--wide {
       grid-column: -1 / 1;
+
+
+    }
+
+    &--wide-om-mobile-s {
+      @include mobile-s {
+        grid-column: -1 / 1;
+      }
+    }
+
+    &.tile {
+      @include mobile {
+        padding: rem(20);
+      }
     }
 
     &-image {
@@ -158,6 +197,12 @@
 
       @include laptop {
         border-radius: var(--border-radius);
+      }
+    }
+
+    &-description {
+      @include mobile-s {
+        font-size: rem(14);
       }
     }
   }
