@@ -62,19 +62,22 @@
         // Выбираем элементы 1-й и 2-й колонки
         &:nth-child(3n - 2),
         &:nth-child(3n - 1) {
-          padding-right: var(--itemPaddingX);
-          border-right: var(--border);
+          position: relative;
+          
+          &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: calc(100% + var(--itemPaddingX));
+            width: rem(1);
+            height: 100%;
+            background-color: var(--color-dark-15);
+          }
         }
 
         // Выбираем элементы во 2-й колонке
         &:nth-child(3n - 1) {
           @include full-vw-centered-line(bottom);
-        }
-
-        // Выбираем элементы 2-й и 3-й колонки
-        &:nth-child(3n - 1),
-        &:nth-child(3n) {
-          padding-left: var(--itemPaddingX);
         }
       }
     }
