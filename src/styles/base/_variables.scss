@@ -18,6 +18,8 @@
 
   --border: #{rem(1)} solid var(--color-dark-15);
 
+  --shadow: 0 0 0 #{rem(4)} #191919;
+
   --border-radius-small: #{rem(6)};
   --border-radius: #{rem(10)};
   --border-radius-button: #{rem(12)};
