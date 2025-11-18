@@ -7,6 +7,7 @@
     <title>future-Tech | Contacts</title>
 </head>
 <body>
+
 <header class="header" data-js-header>
     <div class="header__promo">
         <div class="header__promo-inner container">
@@ -197,7 +198,60 @@
                             </div>
                         </div>
                         <div class="card__body">
-                            FORM
+                            <form class="feedback-form" action="#">
+                                <div class="feedback-form__cell field">
+                                    <label class="field__lable" for="firstName">
+                                        First Name
+                                        <span class="field__required-star" aria-hidden="true">*</span>
+                                    </label>
+                                    <input class="field__control" id="firstName" type="text" placeholder="Ivan" required>
+                                </div>
+
+                                <div class="feedback-form__cell field">
+                                    <label class="field__lable" for="lasttName">
+                                        Last Name
+                                    </label>
+                                    <input class="field__control" id="lasttName" type="text" placeholder="Ivanov">
+                                </div>
+                                
+                                
+                                <div class="feedback-form__cell field">
+                                    <label class="field__lable" for="email">
+                                        Email
+                                        <span class="field__required-star" aria-hidden="true">*</span>
+                                    </label>
+                                    <input class="field__control" id="email" type="email" placeholder="example@email.com" required>
+                                </div>
+
+                                <div class="feedback-form__cell field">
+                                    <label class="field__lable" for="phoneNamber">
+                                        Phone Number
+                                    </label>
+                                    <div class="field__body">
+                                        <div class="select">SELECT</div>
+                                        <input class="field__control" id="phoneNamber" placeholder="(999) 999-99-99">
+                                    </div>
+                                </div>
+                                
+                                <div class="feedback-form__cell feedback-form__cell--wide field"></div>
+                                <label class="field__lable" for="message">
+                                    Message
+                                    <span class="field__required-star" aria-hidden="true">*</span>
+                                </label>
+                                <textarea class="field__control" id="message" type="textarea" placeholder="Hi! I have an idea..." required></textarea>
+
+                                <div class="feedback-form__cell feedback-form__cell--wide">
+                                    <div class="feedback-form__actions">
+                                        <div class="feedback-form__agreement">
+                                            <label class="checkbox" for="">
+                                                <input class="checkbox__input" type="checkbox" required>
+                                                <span class="checkbox__lable">I agree with Terms of Use and Privacy Policy</span>
+                                            </label>
+                                        </div>
+                                        <button class="feedback-form__button button button--accent" type="submit">Send</button>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -219,7 +273,92 @@
                             </div>
                         </div>
                         <div class="card__body">
-                            ACCORDION
+                            <div class="accordion-group">
+                                <div class="accordion tile">
+                                    <details class="accordion__details" name="faq" open>
+                                        <summary class="accordion__summary">
+                                            <h4 class="accordion__title h6">
+                                                <span role="term" aria-details="faq-1">What is AI?</span>
+                                            </h4>
+                                        </summary>
+                                    </details>
+                                    <div class="accordion__content" id="faq-1" role="definition">
+                                        <div class="accordion__content-inner">
+                                            <div class="accordion__content-body">
+                                               <p> AI stands for Artificial Intelligence, which refers to the simulation of human intelligence in machines. It enables them to perform tasks like problem-solving, learning, and decision-making.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion tile">
+                                    <details class="accordion__details" name="faq">
+                                        <summary class="accordion__summary">
+                                            <h4 class="accordion__title h6">
+                                                <span role="term" aria-details="faq-2">How can I listen to your podcasts?</span>
+                                            </h4>
+                                        </summary>
+                                    </details>
+                                    <div class="accordion__content" id="faq-2" role="definition">
+                                        <div class="accordion__content-inner">
+                                            <div class="accordion__content-body">
+                                               <p> AI stands for Artificial Intelligence, which refers to the simulation of human intelligence in machines. It enables them to perform tasks like problem-solving, learning, and decision-making.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion tile">
+                                    <details class="accordion__details" name="faq">
+                                        <summary class="accordion__summary">
+                                            <h4 class="accordion__title h6">
+                                                <span role="term" aria-details="faq-3">Are your podcasts free to listen to?</span>
+                                            </h4>
+                                        </summary>
+                                    </details>
+                                    <div class="accordion__content" id="faq-3" role="definition">
+                                        <div class="accordion__content-inner">
+                                            <div class="accordion__content-body">
+                                               <p> AI stands for Artificial Intelligence, which refers to the simulation of human intelligence in machines. It enables them to perform tasks like problem-solving, learning, and decision-making.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion tile">
+                                    <details class="accordion__details" name="faq">
+                                        <summary class="accordion__summary">
+                                            <h4 class="accordion__title h6">
+                                                <span role="term" aria-details="faq-4">Can I download episodes to listen offline?</span>
+                                            </h4>
+                                        </summary>
+                                    </details>
+                                    <div class="accordion__content" id="faq-4" role="definition">
+                                        <div class="accordion__content-inner">
+                                            <div class="accordion__content-body">
+                                               <p> AI stands for Artificial Intelligence, which refers to the simulation of human intelligence in machines. It enables them to perform tasks like problem-solving, learning, and decision-making.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion tile">
+                                    <details class="accordion__details" name="faq">
+                                        <summary class="accordion__summary">
+                                            <h4 class="accordion__title h6">
+                                                <span role="term" aria-details="faq-5">How often do you release new episodes?</span>
+                                            </h4>
+                                        </summary>
+                                    </details>
+                                    <div class="accordion__content" id="faq-5" role="definition">
+                                        <div class="accordion__content-inner">
+                                            <div class="accordion__content-body">
+                                               <p> AI stands for Artificial Intelligence, which refers to the simulation of human intelligence in machines. It enables them to perform tasks like problem-solving, learning, and decision-making.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
