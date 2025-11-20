@@ -38,6 +38,7 @@
   &__item {
     display: flex;
     flex-direction: column-reverse;
+    justify-content: start;
     row-gap: fluid(10, 0);
     padding: rem(50);
 

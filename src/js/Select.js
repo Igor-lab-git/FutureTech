@@ -95,8 +95,8 @@ class Select extends BaseComponent  {
         const viewportWidth = document.documentElement.clientWidth;
         const halfViewportX = viewportWidth / 2;
         const { width, x } = this.buttonElement.getBoundingClientRect();
-        const buttonCentrX = x + width / 2;
-        const isButtonOnTheViewportSize = buttonCentrX < halfViewportX;
+        const buttonCentreX = x + width / 2;
+        const isButtonOnTheViewportSize = buttonCentreX < halfViewportX;
 
         this.dropdownElement.classList.toggle(
             this.stateClasses.isOnTheLeftSide,
@@ -149,7 +149,7 @@ class Select extends BaseComponent  {
       }
 
       onArrowUpKeyDown = () => {
-        if(isNeedToExpand()) {
+        if(this.isNeedToExpand) {
             this.expand();
             return;
         }
@@ -160,7 +160,7 @@ class Select extends BaseComponent  {
       }
 
       onArrowDownKeyDown = () => {
-        if(isNeedToExpand()) {
+        if(this.isNeedToExpand) {
             this.expand();
             return;
         }
@@ -171,7 +171,7 @@ class Select extends BaseComponent  {
       }
 
       onSpaceKeyDown = () => {
-        if(isNeedToExpand()) {
+        if(this.isNeedToExpand) {
             this.expand();
             return;
         }
@@ -181,7 +181,7 @@ class Select extends BaseComponent  {
       }
 
       onEnterKeyDown = () => {
-        if(isNeedToExpand()) {
+        if(this.isNeedToExpand) {
             this.expand();
             return;
         }
