@@ -223,15 +223,16 @@ class Select extends BaseComponent  {
       }
 }
 
+
 class SelectCollection {
   constructor() {
-    this.init();
+    this.init()
   }
 
   init() {
     document.querySelectorAll(rootSelector).forEach((element) => {
-      new Select(element);
-    });
+      new Select(element)
+    })
   }
 }
 
